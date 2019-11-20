@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.bunty.blackbnstructure.ui.fragment.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+        <argument
+            android:name="title"
+            android:defaultValue="@string/title_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/dashBoardFragment"
+        android:name="com.bunty.blackbnstructure.ui.fragment.DashBoardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dash_board">
+
+        <argument
+            android:name="title"
+            android:defaultValue="@string/title_dashboard" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/notificationFragment"
+        android:name="com.bunty.blackbnstructure.ui.fragment.NotificationFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_notification">
+        <argument
+            android:name="title"
+            android:defaultValue="@string/title_notifications" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.bunty.blackbnstructure.ui.fragment.ProfileFragment"
+        android:label="@string/title_profile"
+        tools:layout="@layout/fragment_profile" >
+
+        <argument
+            android:name="title"
+            android:defaultValue="@string/title_profile" />
+        <action
+            android:id="@+id/action_profileFragment_to_profileSettingsFragment"
+            app:destination="@id/profileSettingsFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/profileSettingsFragment"
+        android:name="com.bunty.blackbnstructure.ProfileSettingsFragment"
+        android:label="@string/title_settings"
+        tools:layout="@layout/fragment_profile_settings" />
+</navigation>
